@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="header">
+        <h2>Movies</h2>
+    </div>
+    <div class="cardHolder">
+        <div *ngFor="let movie of admin.movies; index as i;" class="card">
+            <img src={{movie.image}} alt={{movie.name}}>
+            <h3>{{movie.name}}</h3>
+            <p>{{movie.description}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.wrapper{
+    width: 100%;
+}
+.header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cardHolder{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
+.card{
+    width: 250px;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    position: relative;
+}
+.card > img{
+    width: 250px;
+    height: 200px;
+    object-fit: contain;
+}
+.card > p{
+    font-size: 14px;
+    color: #888;
+}

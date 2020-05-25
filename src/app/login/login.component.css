@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    justify-content: center;
+}
+.loginBox{
+    width: 350px;
+}
+p{
+    margin-top: 20px;
+    color: #aaa;
+}
