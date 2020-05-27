@@ -1,15 +1,23 @@
 <div class="container">
   <div class="loginBox">
     <div class="tab">
-      <button class="tablinks" (click)="switchToAdmin(true)" id="admin-btn">
+      <button
+        class="tablinks"
+        (click)="switchToAdmin(true); switchToCust(false)"
+        id="admin-btn"
+      >
         Admin
       </button>
-      <button class="tablinks" (click)="switchToCust(true)" id="customer-btn">
+      <button
+        class="tablinks"
+        (click)="switchToCust(true); switchToAdmin(false)"
+        id="customer-btn"
+      >
         Customer
       </button>
     </div>
     <h1>Login</h1>
-    <form #loginForm="ngForm" *ngIf="adminFlag">
+    <form #loginForm="ngForm" *ngIf="adminFlag || custFlag">
       <div class="form-group">
         <label for="name">Email</label>
         <input
