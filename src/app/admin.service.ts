@@ -10,7 +10,7 @@ export class AdminService {
   movies: Movie[];
   theatres: Theatre[];
   constructor() {
-    this.movies = [movie];
+    this.movies = [...movie];
 
     this.theatres = [
       new Theatre(101, 'IMAX', 'Delhi', 12, [

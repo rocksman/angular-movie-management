@@ -1,6 +1,8 @@
 <nav>
   <div class="wrapper">
-    <h3>showbookings.com</h3>
+    <a routerLink='/'>
+      <img src="../assets/logo.png" />
+    </a>
     <ul>
       <li *ngIf="!auth.isAuth">
         <button class="btn">
@@ -14,6 +16,11 @@
       </li>
       <li *ngIf="auth.isAuth" (click)="changeAuth(false)">
         <button class="btn btn-danger">Logout</button>
+      </li>
+      <li *ngIf="auth.isAuth">
+        <button class="btn btn-success">
+          <a routerLink="/admin" routerLinkActive="active">admin</a>
+        </button>
       </li>
     </ul>
   </div>
