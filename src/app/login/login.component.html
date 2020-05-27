@@ -1,10 +1,20 @@
 <div class="container">
   <div class="loginBox">
-    <div class="tab">
-      <button class="tablinks" (click)="switchToAdmin(true)" id="admin-btn">
+    <div class="tabNav">
+      <button
+        [ngClass]="adminFlag ? 'underline' : ''"
+        (click)="switchToAdmin(true); switchToCust(false)"
+        id="admin-btn"
+      >
         Admin
       </button>
-      <button class="tablinks" (click)="switchToCust(true)" id="customer-btn">Customer</button>
+      <button
+        [ngClass]="custFlag ? 'underline' : ''"
+        (click)="switchToCust(true); switchToAdmin(false)"
+        id="customer-btn"
+      >
+        Customer
+      </button>
     </div>
     <h1>Login</h1>
     <form #loginForm="ngForm" *ngIf="adminFlag">
@@ -29,12 +39,49 @@
           name="password"
         />
       </div>
-      <button type="submit" class="btn btn-success" (click)="authenticate()">
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="authenticateAdmin()"
+      >
+        Login
+      </button>
+    </form>
+
+    <!--Customer-->
+    <form #loginForm="ngForm" *ngIf="custFlag">
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="user.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          [(ngModel)]="user.password"
+          name="password"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="authenticateCust()"
+      >
         Login
       </button>
     </form>
     <p *ngIf="custFlag">
       Haven't registered yet? <a routerLink="/register">Register now</a>
     </p>
+    <p *ngIf="custFlag">Forgot your Password? <a>Reset your Password</a></p>
   </div>
 </div>
