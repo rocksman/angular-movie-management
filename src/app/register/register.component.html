@@ -1,13 +1,25 @@
-<div>
-    <form action="">
-        <!-- <label for="">First Name</label><br> -->
-        <input type="text" name="fName" id="" placeholder="First Name" /><br /><br />
-        <!-- <label for="">Last Name</label><br> -->
-        <input type="text" name="lName" id="" placeholder="Last Name" /><br /><br />
-        <!-- <label for="">E-mail Address</label><br> -->
-        <input type="text" name="mail" id="" placeholder="E-mail Address" /><br /><br />
-        <!-- <label for="">Password</label><br> -->
-        <input type="text" name="password" id="" placeholder="Password" /><br /><br />
-        <button type="submit">Register</button>
-    </form>
+<div class="container">
+    <div class="registerBox">
+        <h1>Register</h1>
+        <form #loginForm="ngForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="Phone">Phone</label>
+                <input type="tel" class="form-control" id="phone" required [(ngModel)]="user.phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="register()">Register</button>
+        </form>
+        <p>Already a user? <a routerLink="/login">Login</a></p>
+    </div>
 </div>
