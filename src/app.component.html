@@ -1,0 +1,12 @@
+<nav>
+  <div class="wrapper">
+    <h3>Movie</h3>
+    <ul>
+      <li *ngIf="!auth.isAuth"><button class="btn"><a routerLink="/login" routerLinkActive="active">Login</a></button></li>
+      <li *ngIf="!auth.isAuth"><button class="btn btn-success"><a routerLink="/register" routerLinkActive="active">Register</a></button></li>
+      <li *ngIf="auth.isAuth" (click)="changeAuth(false)"><button class="btn btn-danger">Logout</button></li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
