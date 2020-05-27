@@ -1,13 +1,13 @@
 <div class="container">
   <div class="loginBox">
-    <h1>Login</h1>
-    <div class="tabNav">
-      <button [ngClass]="customerMode ? 'underline': ''"  (click)="switchMode(true)" id="customer-btn">Customer</button>
-      <button [ngClass]="customerMode ? '': 'underline'" (click)="switchMode(false)" id="admin-btn">
+    <div class="tab">
+      <button class="tablinks" (click)="switchToAdmin(true)" id="admin-btn">
         Admin
       </button>
+      <button class="tablinks" (click)="switchToCust(true)" id="customer-btn">Customer</button>
     </div>
-    <form #loginForm="ngForm">
+    <h1>Login</h1>
+    <form #loginForm="ngForm" *ngIf="adminFlag">
       <div class="form-group">
         <label for="name">Email</label>
         <input
@@ -33,7 +33,7 @@
         Login
       </button>
     </form>
-    <p *ngIf="customerMode">
+    <p *ngIf="custFlag">
       Haven't registered yet? <a routerLink="/register">Register now</a>
     </p>
   </div>
