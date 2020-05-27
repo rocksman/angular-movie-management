@@ -17,6 +17,7 @@ export class LoginComponent implements OnInit {
     password: '',
   };
 
+  customerMode: boolean = true;
   constructor(
     public router: Router,
     public service: UserDataService,
@@ -30,13 +31,9 @@ export class LoginComponent implements OnInit {
       alert('Incorrect email or password');
     }
   };
-  authenticateCust = () => {};
 
-  switchToAdmin = (adminFlag) => {
-    this.adminFlag = adminFlag;
-  };
-  switchToCust = (custFlag) => {
-    this.adminFlag = custFlag;
+  switchMode = (flag) => {
+    this.customerMode = flag;
   };
 
   ngOnInit(): void {}
