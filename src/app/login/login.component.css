@@ -6,10 +6,29 @@
 }
 .loginBox {
   width: 400px;
+  height: 450px;
   background: #fff;
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(102, 102, 102, 0.527);
+}
+.tabNav{
+  margin: 25px 0px;
+}
+.tabNav > button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  padding: 10px 5px;
+  margin-right: 20px; 
+  text-align: left;
+}
+button.underline{
+  border-bottom: 3px solid #398439 !important;
+}
+button:focus{
+  border: none;
+  outline: none;
 }
 p {
   margin-top: 20px;

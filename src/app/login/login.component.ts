@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
     email: '',
     password: '',
   };
+
+  customerMode: boolean = true;
   constructor(
     public router: Router,
     public service: UserDataService,
@@ -30,11 +32,8 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  switchToAdmin = (adminFlag) => {
-    this.adminFlag = adminFlag;
-  };
-  switchToCust = (custFlag) => {
-    this.custFlag = custFlag;
+  switchMode = (flag) => {
+    this.customerMode = flag;
   };
 
   ngOnInit(): void {}
