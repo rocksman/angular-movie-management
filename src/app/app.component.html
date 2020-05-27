@@ -1,17 +1,19 @@
 <nav>
   <div class="wrapper">
-    <a routerLink='/'>
+    <a routerLink="/">
       <img src="../assets/logo.png" />
     </a>
     <ul>
       <li *ngIf="!auth.isAuth">
         <button class="btn">
-          <a routerLink="/login" routerLinkActive="active">Login</a>
+          <a routerLink="/login" routerLinkActive="active" id="log">Login</a>
         </button>
       </li>
       <li *ngIf="!auth.isAuth">
         <button class="btn btn-success">
-          <a routerLink="/register" routerLinkActive="active">Register</a>
+          <a routerLink="/register" routerLinkActive="active" id="reg"
+            >Register</a
+          >
         </button>
       </li>
       <li *ngIf="auth.isAuth" (click)="changeAuth(false)">
@@ -19,7 +21,7 @@
       </li>
       <li *ngIf="auth.isAuth">
         <button class="btn btn-success">
-          <a routerLink="/admin" routerLinkActive="active">admin</a>
+          <a routerLink="/admin" routerLinkActive="active">Admin</a>
         </button>
       </li>
     </ul>
