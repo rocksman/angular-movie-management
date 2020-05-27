@@ -1,25 +1,54 @@
 <div class="wrapper">
-    <div class="theatreBox">
-        <h1>New Theatre</h1>
-        <form #loginForm="ngForm">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="name" id="text" required [(ngModel)]="theatre.name" />
-            </div>
-            <div class="form-group">
-                <label for="name">City</label>
-                <input type="text" class="form-control" name="city" id="city" required [(ngModel)]="theatre.city" />
-            </div>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="noofscreens" id="noofscreens" required
-                    [(ngModel)]="theatre.noOfScreens" />
-            </div>
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="movies" id="movies" required
-                    [(ngModel)]="theatre.movies" />
-            </div>
-        </form>
-    </div>
+  <div class="theatreBox">
+    <h1>New Theatre</h1>
+    <form #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          name="name"
+          id="text"
+          required
+          [(ngModel)]="theatre.name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">City</label>
+        <input
+          type="text"
+          class="form-control"
+          name="city"
+          id="city"
+          required
+          [(ngModel)]="theatre.city"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Number of Screens</label>
+        <input
+          type="text"
+          class="form-control"
+          name="noofscreens"
+          id="noofscreens"
+          required
+          [(ngModel)]="theatre.noOfScreens"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Movies</label>
+        <input
+          type="text"
+          class="form-control"
+          name="movies"
+          id="movies"
+          required
+          [(ngModel)]="theatre.movies"
+        />
+      </div>
+      <button type="submit" class="btn btn-success" (click)="addTheatre()">
+        Submit
+      </button>
+    </form>
+  </div>
 </div>
