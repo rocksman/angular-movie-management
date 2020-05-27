@@ -1,11 +1,29 @@
 <div class="container">
   <div class="loginBox">
+<<<<<<< HEAD
     <h1>Login</h1>
     <div class="tabNav">
       <button [ngClass]="customerMode ? 'underline': ''"  (click)="switchMode(true)" id="customer-btn">Customer</button>
       <button [ngClass]="customerMode ? '': 'underline'" (click)="switchMode(false)" id="admin-btn">
         Admin
       </button>
+=======
+    <div class="tab">
+      <button
+        class="tablinks"
+        (click)="switchToAdmin(true); switchToCust(false)"
+        id="admin-btn"
+      >
+        Admin
+      </button>
+      <button
+        class="tablinks"
+        (click)="switchToCust(true); switchToAdmin(false)"
+        id="customer-btn"
+      >
+        Customer
+      </button>
+>>>>>>> b8b16fe9ad5610c92cca59433ea31db3907e3555
     </div>
     <form #loginForm="ngForm">
       <div class="form-group">
@@ -29,12 +47,49 @@
           name="password"
         />
       </div>
-      <button type="submit" class="btn btn-success" (click)="authenticate()">
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="authenticateAdmin()"
+      >
+        Login
+      </button>
+    </form>
+
+    <!--Customer-->
+    <form #loginForm="ngForm" *ngIf="custFlag">
+      <div class="form-group">
+        <label for="name">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          required
+          [(ngModel)]="user.email"
+          name="email"
+        />
+      </div>
+      <div class="form-group">
+        <label for="alterEgo">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          [(ngModel)]="user.password"
+          name="password"
+        />
+      </div>
+      <button
+        type="submit"
+        class="btn btn-success"
+        (click)="authenticateCust()"
+      >
         Login
       </button>
     </form>
     <p *ngIf="customerMode">
       Haven't registered yet? <a routerLink="/register">Register now</a>
     </p>
+    <p *ngIf="custFlag">Forgot Password? <a>Reset Password Now</a></p>
   </div>
 </div>
