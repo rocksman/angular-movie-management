@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Tarzan",
+    "director": "Ron",
+    "description": "A beautiful movie about ape man",
+    "image": "https://vignette.wikia.nocookie.net/disneyprincess/images/5/50/Tarzan.jpg/revision/latest?cb=20180526223057"
+  },
+  {
+    "id": 2,
+    "name": "Interstellar",
+    "director": "John",
+    "description": "A movie about space and time",
+    "image": "https://bit.ly/3glgoaG"
+  },
+  {
+    "id": 3,
+    "name": "The Sound of Music",
+    "director": "Susan",
+    "description": "A story about a nun and her love for music and kids",
+    "image": "https://bit.ly/3d8dYtZ"
+  },
+  {
+    "id": 4,
+    "name": "Stuart Little",
+    "director": "Hannah",
+    "description": "A story of a mouse, his human best friend, and a cat",
+    "image": "https://bit.ly/3daAe6K"
+  }
+]

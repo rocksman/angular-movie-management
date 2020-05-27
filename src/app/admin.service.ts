@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core'
+import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Theatre } from './theatre';
+import movie from './files/movies.json';
 
 @Injectable({
   providedIn: 'root',
@@ -9,15 +10,7 @@ export class AdminService {
   movies: Movie[];
   theatres: Theatre[];
   constructor() {
-    this.movies = [
-      new Movie(
-        1,
-        'Tarzan',
-        'Ron',
-        'A beautiful movie about ape man',
-        'https://vignette.wikia.nocookie.net/disneyprincess/images/5/50/Tarzan.jpg/revision/latest?cb=20180526223057'
-      ),
-    ];
+    this.movies = [movie];
 
     this.theatres = [
       new Theatre(101, 'IMAX', 'Delhi', 12, [
