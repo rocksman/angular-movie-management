@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     public service: UserDataService,
     public auth: AuthService
   ) {}
-  authenticateAdmin = () => {
+  authenticate = () => {
     if (this.service.authenticateUser(this.user)) {
       this.router.navigate(['home']);
       this.auth.changeAuth(true);
