@@ -10,6 +10,8 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { NewMovieComponent } from './new-movie/new-movie.component';
 import { MoviesAdminComponent } from './movies-admin/movies-admin.component';
+import { NewTheatreComponent } from './new-theatre/new-theatre.component';
+import { TheatresAdminComponent } from './theatres-admin/theatres-admin.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { MoviesAdminComponent } from './movies-admin/movies-admin.component';
     RegisterComponent,
     AdminComponent,
     NewMovieComponent,
-    MoviesAdminComponent
+    MoviesAdminComponent,
+    NewTheatreComponent,
+    TheatresAdminComponent
   ],
   imports: [
     BrowserModule,
