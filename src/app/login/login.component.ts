@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
     public service: UserDataService,
     public auth: AuthService
   ) {}
-  authenticate = () => {
+  authenticateAdmin = () => {
     if (this.service.authenticateUser(this.user)) {
       this.router.navigate(['home']);
       this.auth.changeAuth(true);
@@ -29,6 +29,8 @@ export class LoginComponent implements OnInit {
       alert('Incorrect email or password');
     }
   };
+
+  authenticateCust = () => {};
 
   switchToAdmin = (adminFlag) => {
     this.adminFlag = adminFlag;
