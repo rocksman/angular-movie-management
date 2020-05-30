@@ -1,17 +1,17 @@
 <div class="wrapper">
-    <div class="header">
-        <h2>Theatres</h2>
-        <button class="btn btn-success" (click)="changeModal(true)">New</button>
+  <div class="header">
+    <h2>Theatres</h2>
+    <button class="btn btn-success" (click)="changeModal(true)">New</button>
+  </div>
+  <div>
+    <div *ngFor="let theatre of admin.theatres; index as i" class="card">
+      <h3>{{ theatre.name }}</h3>
+      <p>{{ theatre.city }}</p>
+      <p>{{ theatre.noOfScreens }}</p>
+      <p>{{ theatre.movies }}</p>
     </div>
-    <div>
-        <div *ngFor="let theatre of admin.theatres; index as i" class="card">
-            <h3>{{ theatre.name }}</h3>
-            <p>{{ theatre.city }}</p>
-            <p>{{ theatre.noOfScreens }}</p>
-            <p>{{ theatre.movies }}</p>
-        </div>
-    </div>
-    <div *ngIf="showModal">
-        <app-new-theatre></app-new-theatre>
-    </div>
-</div>  
+  </div>
+  <div *ngIf="showModal">
+    <app-new-theatre></app-new-theatre>
+  </div>
+</div>
