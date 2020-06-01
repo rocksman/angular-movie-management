@@ -4,7 +4,7 @@
 .wrapper {
   color: #4caf50;
 }
-.card {
+.container {
   color: lightgrey;
   overflow: auto;
 }

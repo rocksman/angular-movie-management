@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Theatre } from './theatre';
+import { Screen } from './screen';
 import movie from './files/movies.json';
 import theatre from './files/theatres.json';
+import screen from './files/screens.json';
+import show from './files/shows.json';
+import { Show } from './show';
 
 @Injectable({
   providedIn: 'root',
@@ -10,10 +14,17 @@ import theatre from './files/theatres.json';
 export class AdminService {
   movies: Movie[];
   theatres: Theatre[];
+  screens: Screen[];
+  shows: Show[];
+
   constructor() {
     this.movies = [...movie];
 
     this.theatres = [...theatre];
+
+    this.screens = [...screen];
+
+    this.shows = [...show];
   }
 
   //Movie
@@ -52,5 +63,72 @@ export class AdminService {
       data.movies
     );
     this.theatres.push(th);
+  };
+  deleteTheatre = (id) => {
+    let pos = -1;
+    this.theatres.map((e, i) => {
+      if (e.id == id) {
+        pos = i;
+      }
+    });
+    if (pos > -1) {
+      this.theatres.splice(pos, 1);
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  //Screen
+  addScreen = (data) => {
+    let scrn = new Screen(
+      data.id,
+      data.name,
+      data.theatreId,
+      data.showList,
+      data.rows,
+      data.columns
+    );
+    this.screens.push(scrn);
+  };
+  deleteScreen = (id) => {
+    let pos = -1;
+    this.screens.map((e, i) => {
+      if (e.id == id) {
+        pos = i;
+      }
+    });
+    if (pos > -1) {
+      this.screens.splice(pos, 1);
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  //Show
+  addShow = (data) => {
+    let shw = new Show(
+      data.id,
+      data.name,
+      data.startTime,
+      data.endTime,
+      data.movie
+    );
+    this.shows.push(shw);
+  };
+  deleteShow = (id) => {
+    let pos = -1;
+    this.shows.map((e, i) => {
+      if (e.id == id) {
+        pos = i;
+      }
+    });
+    if (pos > -1) {
+      this.shows.splice(pos, 1);
+      return true;
+    } else {
+      return false;
+    }
   };
 }

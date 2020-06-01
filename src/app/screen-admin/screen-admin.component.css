@@ -1,0 +1,42 @@
+.header {
+  padding: 15px;
+}
+.wrapper {
+  color: #4caf50;
+}
+.container {
+  color: lightgrey;
+  overflow: auto;
+}
+th {
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+}
+td {
+  height: auto;
+  vertical-align: center;
+  color: black;
+}
+th,
+td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+table {
+  /* border-collapse: collapse; */
+  text-align: center;
+  border: 1px solid white;
+}
+tr:nth-child(even) {
+  background-color: #cac9c9;
+  color: black;
+}
+tr:nth-child(odd) {
+  background-color: white;
+  color: black;
+}
+td > button {
+  background-color: white;
+  color: black;
+}
