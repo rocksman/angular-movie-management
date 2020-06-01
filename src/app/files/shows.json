@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Alpha",
+    "startTime": "09:30",
+    "endTime": "11:15",
+    "movie": "Interstellar"
+  },
+  {
+    "id": 2,
+    "name": "Gamma",
+    "startTime": "19:40",
+    "endTime": "21:45",
+    "movie": "Imitation Game"
+  },
+  {
+    "id": 3,
+    "name": "Beta",
+    "startTime": "14:25",
+    "endTime": "16:50",
+    "movie": "Stuart Little"
+  },
+  {
+    "id": 4,
+    "name": "Alpha",
+    "startTime": "10:10",
+    "endTime": "11:55",
+    "movie": "The Sound of Music"
+  },
+  {
+    "id": 4,
+    "name": "Beta",
+    "startTime": "12:15",
+    "endTime": "14:40",
+    "movie": "Charlie and the Chocolate Factory"
+  }
+]

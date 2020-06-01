@@ -4,14 +4,13 @@ import { AdminService } from '../admin.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-
-  constructor(public admin: AdminService) { }
+  constructor(public admin: AdminService) {}
 
   ngOnInit(): void {
     console.log(this.admin.movies);
+    console.log(this.admin.theatres);
   }
-
 }

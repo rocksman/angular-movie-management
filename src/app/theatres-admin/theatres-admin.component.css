@@ -28,11 +28,12 @@ table {
   text-align: center;
   border: 1px solid white;
 }
-tr:hover {
-  background-color: gray;
-}
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #cac9c9;
+  color: black;
+}
+tr:nth-child(odd) {
+  background-color: white;
   color: black;
 }
 td > button {

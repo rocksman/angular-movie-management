@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Users } from './users';
+import user from './files/users.json';
 
 @Injectable({
   providedIn: 'root',
@@ -7,16 +8,7 @@ import { Users } from './users';
 export class UserDataService {
   users: Users[];
   constructor() {
-    this.users = [
-      new Users(
-        1,
-        'Sandra',
-        'sandrabinoy@gmail.com',
-        'sandrabinoy',
-        '1234567890',
-        true
-      ),
-    ];
+    this.users = [...user];
   }
 
   getUsers = (): Users[] => {
@@ -40,9 +32,5 @@ export class UserDataService {
       false
     );
     this.users.push(newUser);
-  };
-  isAdmin = (user: Users): boolean => {
-    if (user.isAdmin == true) return true;
-    else return false;
   };
 }

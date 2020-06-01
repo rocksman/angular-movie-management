@@ -14,7 +14,7 @@ export class NewTheatreComponent implements OnInit {
     public theatreComp: TheatresAdminComponent
   ) {}
 
-  theatre = new Theatre(Math.random(), '', '', 12, ['']);
+  theatre = new Theatre(Math.random(), '', '', null, ['']);
 
   addTheatre = () => {
     this.admin.addTheatre(this.theatre);

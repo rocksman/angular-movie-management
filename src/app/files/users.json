@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Sandra Binoy",
+    "email": "sandrabinoy@gmail.com",
+    "password": "sandrabinoy",
+    "phone": 1234567890,
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "name": "Hannah Abraham",
+    "email": "hannahbilla@gmail.com",
+    "password": "sandrabinoy",
+    "phone": 1234567890,
+    "isAdmin": false
+  }
+]

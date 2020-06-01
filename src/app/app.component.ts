@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Movies';
   constructor(public auth: AuthService) {
     auth.isAuthenticated();
+    auth.isAdmin();
   }
   changeAuth = (flag) => {
     this.auth.changeAuth(flag);

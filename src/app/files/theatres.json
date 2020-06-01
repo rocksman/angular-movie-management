@@ -1,0 +1,20 @@
+[
+  {
+    "id": 101,
+    "name": "IMAX",
+    "city": "Delhi",
+    "noOfScreens": 12,
+    "movies": ["Tarzan", "Interstellar", "Stuart Little", "The Sound of Music"]
+  },
+  {
+    "id": 102,
+    "name": "PVR",
+    "city": "Mumbai",
+    "noOfScreens": 11,
+    "movies": [
+      "Tarzan",
+      "The Sound of Music",
+      "Charlie and the Chocolate Factory"
+    ]
+  }
+]

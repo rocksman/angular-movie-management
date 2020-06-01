@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Movie } from './movie';
 import { Theatre } from './theatre';
 import movie from './files/movies.json';
+import theatre from './files/theatres.json';
 
 @Injectable({
   providedIn: 'root',
@@ -12,14 +13,7 @@ export class AdminService {
   constructor() {
     this.movies = [...movie];
 
-    this.theatres = [
-      new Theatre(101, 'IMAX', 'Delhi', 12, [
-        'Tarzan',
-        'Interstellar',
-        'Stuart Little',
-        'The sound of Music',
-      ]),
-    ];
+    this.theatres = [...theatre];
   }
 
   //Movie
