@@ -4,11 +4,24 @@
     <button class="btn btn-success" (click)="changeModal(true)">New</button>
   </div>
   <div>
-    <div *ngFor="let theatre of admin.theatres; index as i" class="card">
-      <h3>{{ theatre.name }}</h3>
-      <p>{{ theatre.city }}</p>
-      <p>{{ theatre.noOfScreens }}</p>
-      <p>{{ theatre.movies }}</p>
+    <div class="card">
+      <table>
+        <tr>
+          <th>Theatre Name</th>
+          <th>Location</th>
+          <th>Number of Screens</th>
+          <th>Movies</th>
+          <th colspan="2">Modify</th>
+        </tr>
+        <tr *ngFor="let theatre of admin.theatres; index as i">
+          <td>{{ theatre.name }}</td>
+          <td>{{ theatre.city }}</td>
+          <td>{{ theatre.noOfScreens }}</td>
+          <td>{{ theatre.movies }}</td>
+          <td><button>Delete</button></td>
+          <td><button>Update</button></td>
+        </tr>
+      </table>
     </div>
   </div>
   <div *ngIf="showModal">

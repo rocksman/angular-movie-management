@@ -12,6 +12,10 @@ import { NewMovieComponent } from './new-movie/new-movie.component';
 import { MoviesAdminComponent } from './movies-admin/movies-admin.component';
 import { NewTheatreComponent } from './new-theatre/new-theatre.component';
 import { TheatresAdminComponent } from './theatres-admin/theatres-admin.component';
+import { NewScreenComponent } from './new-screen/new-screen.component';
+import { ScreenAdminComponent } from './screen-admin/screen-admin.component';
+import { NewShowComponent } from './new-show/new-show.component';
+import { ShowAdminComponent } from './show-admin/show-admin.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import { TheatresAdminComponent } from './theatres-admin/theatres-admin.componen
     NewMovieComponent,
     MoviesAdminComponent,
     NewTheatreComponent,
-    TheatresAdminComponent
+    TheatresAdminComponent,
+    NewScreenComponent,
+    ScreenAdminComponent,
+    NewShowComponent,
+    ShowAdminComponent
   ],
   imports: [
     BrowserModule,
