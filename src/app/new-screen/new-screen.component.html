@@ -1,1 +1,65 @@
-<p>new-screen works!</p>
+<div class="wrapper">
+  <div class="screenBox">
+    <h1>New Screen</h1>
+    <form #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="text"
+          required
+          [(ngModel)]="screen.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="theatreId">Theatre ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="theatreId"
+          required
+          [(ngModel)]="screen.theatreId"
+          name="theatreId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="showId">Show ID</label>
+        <input
+          type="text"
+          class="form-control"
+          id="showId"
+          required
+          [(ngModel)]="screen.showId"
+          name="showId"
+        />
+      </div>
+      <div class="form-group">
+        <label for="rows">Number of Rows</label>
+        <input
+          type="text"
+          class="form-control"
+          id="rows"
+          required
+          [(ngModel)]="screen.rows"
+          name="rows"
+        />
+      </div>
+      <div class="form-group">
+        <label for="columns">Number of Columns</label>
+        <input
+          type="text"
+          class="form-control"
+          id="columns"
+          required
+          [(ngModel)]="screen.columns"
+          name="columns"
+        />
+      </div>
+      <button type="submit" class="btn btn-success" (click)="addScreen()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

@@ -12,7 +12,7 @@ export class ScreenAdminComponent implements OnInit {
   constructor(public admin: AdminService) {}
 
   changeModal = (flag) => {
-    this.showModal = true;
+    this.showModal = flag;
   };
 
   deleteScreen = (id) => {

@@ -1,1 +1,57 @@
-<p>new-show works!</p>
+<div class="wrapper">
+  <div class="showBox">
+    <button type="button" class="btn btn-info btn-lg" style="float: right;">
+      x
+    </button>
+    <h1>New Show</h1>
+    <form #loginForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="text"
+          required
+          [(ngModel)]="show.name"
+          name="name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="startTime">Start Time</label>
+        <input
+          type="text"
+          class="form-control"
+          id="startTime"
+          required
+          [(ngModel)]="show.startTime"
+          name="startTime"
+        />
+      </div>
+      <div class="form-group">
+        <label for="endTime">End Time</label>
+        <input
+          type="text"
+          class="form-control"
+          id="endTime"
+          required
+          [(ngModel)]="show.endTime"
+          name="endTime"
+        />
+      </div>
+      <div class="form-group">
+        <label for="movie">Movie</label>
+        <input
+          type="text"
+          class="form-control"
+          id="movie"
+          required
+          [(ngModel)]="show.movie"
+          name="movie"
+        />
+      </div>
+      <button type="submit" class="btn btn-success" (click)="addShow()">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

@@ -5,23 +5,25 @@
   </div>
   <div>
     <div class="container">
-      <table>
-        <tr>
-          <th>Theatre Name</th>
-          <th>Location</th>
-          <th>Number of Screens</th>
-          <th>Movies</th>
-          <th colspan="2">Modify</th>
-        </tr>
-        <tr *ngFor="let theatre of admin.theatres; index as i">
-          <td>{{ theatre.name }}</td>
-          <td>{{ theatre.city }}</td>
-          <td>{{ theatre.noOfScreens }}</td>
-          <td>{{ theatre.movies }}</td>
-          <td><button>Delete</button></td>
-          <td><button>Update</button></td>
-        </tr>
-      </table>
+      <div class="table">
+        <table>
+          <tr>
+            <th>Theatre Name</th>
+            <th>Location</th>
+            <th>Number of Screens</th>
+            <th>Movies</th>
+            <th colspan="2">Modify</th>
+          </tr>
+          <tr *ngFor="let theatre of admin.theatres; index as i">
+            <td>{{ theatre.name }}</td>
+            <td>{{ theatre.city }}</td>
+            <td>{{ theatre.noOfScreens }}</td>
+            <td>{{ theatre.movies }}</td>
+            <td><button>Delete</button></td>
+            <td><button>Update</button></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
   <div *ngIf="showModal">

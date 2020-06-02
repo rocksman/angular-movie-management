@@ -1,1 +1,32 @@
-<p>show-admin works!</p>
+<div class="wrapper">
+  <div class="header">
+    <h2>Shows</h2>
+    <button class="btn btn-success" (click)="changeModal(true)">New</button>
+  </div>
+  <div class="container">
+    <div class="table">
+      <table>
+        <tr>
+          <th>Show ID</th>
+          <th>Show Name</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Movie</th>
+          <th colspan="2">Modify</th>
+        </tr>
+        <tr *ngFor="let show of admin.shows; index as i">
+          <td>{{ show.id }}</td>
+          <td>{{ show.name }}</td>
+          <td>{{ show.startTime }}</td>
+          <td>{{ show.endTime }}</td>
+          <td>{{ show.movie }}</td>
+          <td><button>Delete</button></td>
+          <td><button>Update</button></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div *ngIf="showModal">
+    <app-new-show></app-new-show>
+  </div>
+</div>

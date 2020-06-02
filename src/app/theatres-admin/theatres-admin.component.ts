@@ -13,5 +13,11 @@ export class TheatresAdminComponent implements OnInit {
   changeModal = (flag) => {
     this.showModal = flag;
   };
+
+  deleteTheatre = (id) => {
+    alert(id);
+    this.admin.deleteTheatre(id);
+    console.log(this.admin.theatres);
+  };
   ngOnInit(): void {}
 }
