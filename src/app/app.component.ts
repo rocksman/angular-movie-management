@@ -11,6 +11,7 @@ export class AppComponent {
   constructor(public auth: AuthService) {
     auth.isAuthenticated();
     auth.isAdmin();
+    console.log(auth.isAdmin());
   }
   changeAuth = (flag) => {
     this.auth.changeAuth(flag);

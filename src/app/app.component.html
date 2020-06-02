@@ -19,7 +19,7 @@
       <li *ngIf="auth.isAuth" (click)="changeAuth(false)">
         <button class="btn btn-danger">Logout</button>
       </li>
-      <li *ngIf="auth.isAdmin">
+      <li *ngIf="auth.adminRole">
         <button class="btn btn-success">
           <a routerLink="/admin" routerLinkActive="active">Admin</a>
         </button>

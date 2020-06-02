@@ -6,7 +6,7 @@ import { RoleGuardService } from './role-guard.service';
 })
 export class AuthService {
   isAuth = false;
-  adminRole: RoleGuardService;
+  adminRole = false;
   constructor() {}
 
   public isAdmin(): boolean {
@@ -14,8 +14,10 @@ export class AuthService {
     try {
       let isAdmin = JSON.parse(token).isAdmin;
       if (!isAdmin || !this.isAuthenticated()) {
+        this.adminRole = false;
         return false;
       } else {
+        this.adminRole = true;
         return true;
       }
     } catch (e) {
