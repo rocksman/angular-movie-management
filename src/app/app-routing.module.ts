@@ -5,6 +5,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
+import { SeatBookingComponent } from './seat-booking/seat-booking.component';
 
 import { RoleGuardService } from './role-guard.service';
 
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent, canActivate: [RoleGuardService] },
+  { path: 'seats', component: SeatBookingComponent },
 ];
 
 @NgModule({

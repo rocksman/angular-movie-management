@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+import screens from '../files/screens.json';
+import value from '../files/screens.json';
 
 @Component({
   selector: 'app-seat-booking',
@@ -6,79 +9,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./seat-booking.component.css'],
 })
 export class SeatBookingComponent implements OnInit {
-  constructor() {
-    function onLoaderFunc() {
-      this.$('.seatStructure *').prop('disabled', true);
-      this.$('.displayerBoxes *').prop('disabled', true);
-    }
-    function takeData() {
-      if (
-        this.$('#Username').val().length == 0 ||
-        this.$('#Numseats').val().length == 0
-      ) {
-        alert('Please Enter your Name and Number of Seats');
-      } else {
-        this.$('.inputForm *').prop('disabled', true);
-        this.$('.seatStructure *').prop('disabled', false);
-        document.getElementById('notification').innerHTML =
-          "<b style='margin-bottom:0px;background:yellow;'>Please Select your Seats NOW!</b>";
-      }
-    }
+  constructor() {}
 
-    function updateTextArea() {
-      if (this.$('input:checked').length == this.$('#Numseats').val()) {
-        this.$('.seatStructure *').prop('disabled', true);
+  // let name = document.getElementById('Username').val
 
-        var allNameVals = [];
-        var allNumberVals = [];
-        var allSeatsVals = [];
+  takeData = () => {
+    let nameLength: number = document.getElementById('Username').innerHTML
+      .length;
+    let numSeats: number = document.getElementById('NumSeats').innerHTML.length;
 
-        //Storing in Array
-        allNameVals.push(this.$('#Username').val());
-        allNumberVals.push(this.$('#Numseats').val());
-        this.$('#seatsBlock :checked').each(function () {
-          allSeatsVals.push(this.$(this).val());
-        });
+    // if (nameLength == 0 && numSeats == 0) {
+    //   alert('Please Enter your name and Number of seats');
+    // } else if (nameLength == 0) {
+    //   alert('Please enter your name');
+    // } else if (numSeats == 0) {
+    //   alert('Please enter the number of seats');
+    // } else {
+    //   document
+    //     .getElementById('userInput')
+    //     .querySelector('input').disabled = true;
+    // }
+  };
 
-        //Displaying
-        this.$('#nameDisplay').val(allNameVals);
-        this.$('#NumberDisplay').val(allNumberVals);
-        this.this.$('#seatsDisplay').val(allSeatsVals);
-      } else {
-        alert('Please select ' + this.$('#Numseats').val() + ' seats');
-      }
-    }
+  // seatValues = () => {
+  //   let rows: number = screens.rows;
+  //   console.log(rows);
+  //   let columns: number = screens.columns;
+  //   console.log(columns);
 
-    function myFunction() {
-      alert(this.$('input:checked').length);
-    }
+  //   let seat: string[];
 
-    /*
-    function getCookie(cname) {
-        var name = cname + "=";
-        var ca = document.cookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    }
-    */
-
-    (SeatBookingComponent as any).$(':checkbox').click(function () {
-      if (this.$('input:checked').length == this.$('#Numseats').val()) {
-        this.$(':checkbox').prop('disabled', true);
-        this.$(':checked').prop('disabled', false);
-      } else {
-        this.$(':checkbox').prop('disabled', false);
-      }
-    });
-  }
+  //   // for(var i = 0; i < )
+  // };
 
   ngOnInit(): void {}
 }
