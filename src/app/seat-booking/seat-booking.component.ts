@@ -11,36 +11,72 @@ import value from '../files/screens.json';
 export class SeatBookingComponent implements OnInit {
   constructor() {}
 
-  // let name = document.getElementById('Username').val
+  //variable declarations
+  movieTitle: string = 'Captain America: The Winter Soldier';
+  screen: string = 'LUXE CINEMAS';
+  time: string = 'FRI, 6:45PM';
 
-  takeData = () => {
-    let nameLength: number = document.getElementById('Username').innerHTML
-      .length;
-    let numSeats: number = document.getElementById('NumSeats').innerHTML.length;
+  rows: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+  cols: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-    // if (nameLength == 0 && numSeats == 0) {
-    //   alert('Please Enter your name and Number of seats');
-    // } else if (nameLength == 0) {
-    //   alert('Please enter your name');
-    // } else if (numSeats == 0) {
-    //   alert('Please enter the number of seats');
-    // } else {
-    //   document
-    //     .getElementById('userInput')
-    //     .querySelector('input').disabled = true;
-    // }
+  reserved: string[] = [
+    'A2',
+    'A3',
+    'F5',
+    'F1',
+    'F2',
+    'F6',
+    'F7',
+    'F8',
+    'H1',
+    'H2',
+    'H3',
+    'H4',
+  ];
+  selected: string[] = [];
+
+  ticketPrice: number = 120;
+  convFee: number = 30;
+  totalPrice: number = 0;
+  currency: string = 'Rs';
+
+  //return status of each seat
+  getStatus = function (seatPos: string) {
+    if (this.reserved.indexOf(seatPos) !== -1) {
+      return 'reserved';
+    } else if (this.selected.indexOf(seatPos) !== -1) {
+      return 'selected';
+    }
   };
+  //clear handler
+  clearSelected = function () {
+    this.selected = [];
+  };
+  //click handler
+  seatClicked = function (seatPos: string) {
+    var index = this.selected.indexOf(seatPos);
 
-  // seatValues = () => {
-  //   let rows: number = screens.rows;
-  //   console.log(rows);
-  //   let columns: number = screens.columns;
-  //   console.log(columns);
-
-  //   let seat: string[];
-
-  //   // for(var i = 0; i < )
-  // };
+    if (index !== -1) {
+      // seat already selected, remove
+      this.selected.splice(index, 1);
+    } else {
+      //push to selected array only if it is not reserved
+      if (this.reserved.indexOf(seatPos) === -1) this.selected.push(seatPos);
+    }
+  };
+  //Buy button handler
+  showSelected = function () {
+    if (this.selected.length > 0) {
+      alert(
+        'Selected Seats: ' +
+          this.selected +
+          '\nTotal: ' +
+          (this.ticketPrice * this.selected.length + this.convFee)
+      );
+    } else {
+      alert('No seats selected!');
+    }
+  };
 
   ngOnInit(): void {}
 }
