@@ -15,6 +15,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'admin', component: AdminComponent, canActivate: [RoleGuardService], }
+  {path: ''
+  }
 ];
 
 @NgModule({

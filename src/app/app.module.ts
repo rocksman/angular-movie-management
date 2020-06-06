@@ -16,6 +16,7 @@ import { NewScreenComponent } from './new-screen/new-screen.component';
 import { ScreenAdminComponent } from './screen-admin/screen-admin.component';
 import { NewShowComponent } from './new-show/new-show.component';
 import { ShowAdminComponent } from './show-admin/show-admin.component';
+import { SeatBookingComponent } from './seat-booking/seat-booking.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ShowAdminComponent } from './show-admin/show-admin.component';
     NewScreenComponent,
     ScreenAdminComponent,
     NewShowComponent,
-    ShowAdminComponent
+    ShowAdminComponent,
+    SeatBookingComponent
   ],
   imports: [
     BrowserModule,
