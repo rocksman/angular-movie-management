@@ -8,19 +8,16 @@ import { AdminComponent } from './admin/admin.component';
 
 import { RoleGuardService } from './role-guard.service';
 
-
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'admin', component: AdminComponent, canActivate: [RoleGuardService], }
-  {path: ''
-  }
+  { path: 'admin', component: AdminComponent, canActivate: [RoleGuardService] },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
