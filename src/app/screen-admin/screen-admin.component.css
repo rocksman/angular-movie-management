@@ -36,7 +36,3 @@ tr:nth-child(odd) {
   background-color: white;
   color: black;
 }
-td > button {
-  background-color: white;
-  color: black;
-}

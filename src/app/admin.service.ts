@@ -34,7 +34,8 @@ export class AdminService {
       data.name,
       data.director,
       data.description,
-      data.image
+      data.image,
+      data.video
     );
     this.movies.push(mov);
   };

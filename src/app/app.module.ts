@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { ScreenAdminComponent } from './screen-admin/screen-admin.component';
 import { NewShowComponent } from './new-show/new-show.component';
 import { ShowAdminComponent } from './show-admin/show-admin.component';
 import { SeatBookingComponent } from './seat-booking/seat-booking.component';
+import { MovieSliderComponent } from './movie-slider/movie-slider.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +34,11 @@ import { SeatBookingComponent } from './seat-booking/seat-booking.component';
     ScreenAdminComponent,
     NewShowComponent,
     ShowAdminComponent,
-    SeatBookingComponent
+    SeatBookingComponent,
+    MovieSliderComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

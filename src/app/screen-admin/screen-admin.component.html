@@ -3,32 +3,32 @@
     <h2>Screens</h2>
     <button class="btn btn-success" (click)="changeModal(true)">New</button>
   </div>
-</div>
-<div class="container">
-  <div class="table">
-    <table>
-      <tr>
-        <th>Screen ID</th>
-        <th>Screen Name</th>
-        <th>Theatre ID</th>
-        <th>Show List</th>
-        <th>Rows</th>
-        <th>Columns</th>
-        <th colspan="2">Modify</th>
-      </tr>
-      <tr *ngFor="let screen of admin.screens; index as i">
-        <td>{{ screen.id }}</td>
-        <td>{{ screen.name }}</td>
-        <td>{{ screen.theatreId }}</td>
-        <td>{{ screen.showId }}</td>
-        <td>{{ screen.rows }}</td>
-        <td>{{ screen.columns }}</td>
-        <td><button>Delete</button></td>
-        <td><button>Update</button></td>
-      </tr>
-    </table>
+  <div class="container">
+    <div class="table">
+      <table>
+        <tr>
+          <th>Screen ID</th>
+          <th>Screen Name</th>
+          <th>Theatre ID</th>
+          <th>Show List</th>
+          <th>Rows</th>
+          <th>Columns</th>
+          <th colspan="2">Modify</th>
+        </tr>
+        <tr *ngFor="let screen of admin.screens; index as i">
+          <td>{{ screen.id }}</td>
+          <td>{{ screen.name }}</td>
+          <td>{{ screen.theatreId }}</td>
+          <td>{{ screen.showId }}</td>
+          <td>{{ screen.rows }}</td>
+          <td>{{ screen.columns }}</td>
+          <td><button class="btn btn-danger">Delete</button></td>
+          <td><button class="btn btn-warning">Update</button></td>
+        </tr>
+      </table>
+    </div>
   </div>
-</div>
-<div *ngIf="showModal">
-  <app-new-screen></app-new-screen>
+  <div *ngIf="showModal">
+    <app-new-screen></app-new-screen>
+  </div>
 </div>

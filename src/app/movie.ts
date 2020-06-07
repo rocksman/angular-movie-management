@@ -4,6 +4,7 @@ export class Movie {
     public name: string,
     public director: string,
     public description: string,
-    public image: string
+    public image: string,
+    public video: string
   ) {}
 }
