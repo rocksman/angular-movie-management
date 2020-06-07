@@ -1,14 +1,18 @@
+.wrapper {
+  margin: 15px;
+  padding: 10px;
+  width: 100%;
+  color: black;
+}
 .header {
+  padding-right: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.wrapper {
-  width: 100%;
-  color: black;
-}
 .container {
+  padding-right: 50px;
   color: lightgrey;
   overflow: auto;
   width: 100%;
@@ -42,6 +46,6 @@ tr:nth-child(even) {
   color: black;
 }
 tr:nth-child(odd) {
-  background-color: rgb(236, 236, 236);
+  background-color: white;
   color: black;
 }

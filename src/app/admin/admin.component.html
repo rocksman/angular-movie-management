@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="navbar"></div>
   <div class="body">
     <div class="container">
@@ -8,20 +8,16 @@
       <app-show-admin></app-show-admin>
     </div>
   </div>
-</div>
+</div> -->
 
-<!--
-<div class="custom-select-wrapper">
-  <div class="custom-select">
-    <div class="custom-select__trigger">
-      <span>Movies</span>
-      <div class="arrow"></div>
-    </div>
-    <div class="custom-options">
-      <span class="custom-option selected" data-value="theatres">Theatres</span>
-      <span class="custom-option" data-value="screens">Screens</span>
-      <span class="custom-option" data-value="shows">Shows</span>
-    </div>
+<div class="dropdown" style="text-align: center;">
+  <button class="dropbtn">Choose an option</button>
+  <div class="dropdown-content">
+    <a href="/add-movie" routerLinkActive="active">Movie</a>
+    <a href="/add-theatre">Theatre</a>
+    <a href="/add-screen">Screen</a>
+    <a href="/add-show">Show</a>
   </div>
 </div>
--->
+
+<router-outlet></router-outlet>

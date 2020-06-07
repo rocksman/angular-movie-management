@@ -7,6 +7,10 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { SeatBookingComponent } from './seat-booking/seat-booking.component';
 import { MovieSliderComponent } from './movie-slider/movie-slider.component';
+import { MoviesAdminComponent } from './movies-admin/movies-admin.component';
+import { TheatresAdminComponent } from './theatres-admin/theatres-admin.component';
+import { ScreenAdminComponent } from './screen-admin/screen-admin.component';
+import { ShowAdminComponent } from './show-admin/show-admin.component';
 
 import { RoleGuardService } from './role-guard.service';
 
@@ -18,6 +22,10 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [RoleGuardService] },
   { path: 'seats', component: SeatBookingComponent },
   { path: 'movie-slider', component: MovieSliderComponent },
+  { path: 'add-movie', component: MoviesAdminComponent },
+  { path: 'add-theatre', component: TheatresAdminComponent },
+  { path: 'add-screen', component: ScreenAdminComponent },
+  { path: 'add-show', component: ShowAdminComponent },
 ];
 
 @NgModule({
