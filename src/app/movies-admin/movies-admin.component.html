@@ -5,6 +5,7 @@
   </div>
   <div class="cardHolder">
     <div *ngFor="let movie of admin.movies; index as i" class="card">
+      <!-- <button class="btn btn-warning">Update</button> -->
       <button class="btn delete" (click)="deleteMovie(movie.id)">Delete</button>
       <img src="{{ movie.image }}" alt="{{ movie.name }}" />
       <h3>{{ movie.name }}</h3>

@@ -1,16 +1,24 @@
 .header {
-  padding: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .wrapper {
-  color: #4caf50;
+  width: 100%;
+  color: black;
 }
 .container {
   color: lightgrey;
   overflow: auto;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 50px;
 }
 th {
   text-align: center;
-  background-color: #4caf50;
+  background-color: #44af4a;
   color: white;
 }
 td {
@@ -27,12 +35,13 @@ table {
   /* border-collapse: collapse; */
   text-align: center;
   border: 1px solid white;
+  width: 100%;
 }
 tr:nth-child(even) {
   background-color: #cac9c9;
   color: black;
 }
 tr:nth-child(odd) {
-  background-color: white;
+  background-color: rgb(236, 236, 236);
   color: black;
 }

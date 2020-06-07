@@ -18,6 +18,8 @@ import { NewShowComponent } from './new-show/new-show.component';
 import { ShowAdminComponent } from './show-admin/show-admin.component';
 import { SeatBookingComponent } from './seat-booking/seat-booking.component';
 import { MovieSliderComponent } from './movie-slider/movie-slider.component';
+import { UpdateMovieComponent } from './update-movie/update-movie.component';
+import { UpdateTheatreComponent } from './update-theatre/update-theatre.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { MovieSliderComponent } from './movie-slider/movie-slider.component';
     ShowAdminComponent,
     SeatBookingComponent,
     MovieSliderComponent,
+    UpdateMovieComponent,
+    UpdateTheatreComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
