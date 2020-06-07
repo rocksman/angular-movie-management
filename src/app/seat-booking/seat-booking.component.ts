@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
-import screens from '../files/screens.json';
-import value from '../files/screens.json';
 
 @Component({
   selector: 'app-seat-booking',
@@ -11,9 +8,15 @@ import value from '../files/screens.json';
 export class SeatBookingComponent implements OnInit {
   constructor() {}
 
+  showModal = false;
+
+  changeModal = (flag) => {
+    this.showModal = flag;
+  };
+
   //variable declarations
-  movieTitle: string = 'Captain America: The Winter Soldier';
-  screen: string = 'LUXE CINEMAS';
+  movieTitle: string = 'Tarzan';
+  screen: string = 'PVR Cinemas';
   time: string = 'FRI, 6:45PM';
 
   rows: string[] = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
@@ -67,12 +70,13 @@ export class SeatBookingComponent implements OnInit {
   //Buy button handler
   showSelected = function () {
     if (this.selected.length > 0) {
-      alert(
-        'Selected Seats: ' +
-          this.selected +
-          '\nTotal: ' +
-          (this.ticketPrice * this.selected.length + this.convFee)
-      );
+      console.log('Seats selected');
+      // alert(
+      //   'Selected Seats: ' +
+      //     this.selected +
+      //     '\nTotal: ' +
+      //     (this.ticketPrice * this.selected.length + this.convFee)
+      // );
     } else {
       alert('No seats selected!');
     }

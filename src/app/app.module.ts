@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,8 @@ import { UpdateMovieComponent } from './update-movie/update-movie.component';
 import { UpdateTheatreComponent } from './update-theatre/update-theatre.component';
 import { UpdateScreenComponent } from './update-screen/update-screen.component';
 import { UpdateShowComponent } from './update-show/update-show.component';
+import { MovieDisplayDetailsComponent } from './movie-display-details/movie-display-details.component';
+import { PaymentComponent } from './payment/payment.component';
 
 @NgModule({
   declarations: [
@@ -44,8 +47,10 @@ import { UpdateShowComponent } from './update-show/update-show.component';
     UpdateTheatreComponent,
     UpdateScreenComponent,
     UpdateShowComponent,
+    MovieDisplayDetailsComponent,
+    PaymentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

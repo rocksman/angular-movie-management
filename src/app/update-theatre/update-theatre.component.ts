@@ -14,7 +14,7 @@ export class UpdateTheatreComponent implements OnInit {
     public theatreComp: TheatresAdminComponent
   ) {}
 
-  theatre = new Theatre(null, '', '', null, []);
+  theatre = { id: null, name: '', city: '', noOfScreens: '', movies: [] };
 
   addTheatre = () => {
     this.admin.addTheatre(this.theatre);

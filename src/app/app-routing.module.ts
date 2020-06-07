@@ -11,6 +11,8 @@ import { MoviesAdminComponent } from './movies-admin/movies-admin.component';
 import { TheatresAdminComponent } from './theatres-admin/theatres-admin.component';
 import { ScreenAdminComponent } from './screen-admin/screen-admin.component';
 import { ShowAdminComponent } from './show-admin/show-admin.component';
+import { MovieDisplayDetailsComponent } from './movie-display-details/movie-display-details.component';
+import { PaymentComponent } from './payment/payment.component';
 
 import { RoleGuardService } from './role-guard.service';
 
@@ -26,6 +28,8 @@ const routes: Routes = [
   { path: 'add-theatre', component: TheatresAdminComponent },
   { path: 'add-screen', component: ScreenAdminComponent },
   { path: 'add-show', component: ShowAdminComponent },
+  { path: 'movie-dets', component: MovieDisplayDetailsComponent },
+  { path: 'payment', component: PaymentComponent },
 ];
 
 @NgModule({

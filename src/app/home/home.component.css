@@ -1,3 +1,4 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
 .wrapper {
   width: 100%;
 }
@@ -6,10 +7,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #4cc552;
+  color: black;
 }
 .background {
-  height: 80vh;
+  height: 20vh;
   width: 100vw;
   background: url("../../assets/background.jpg");
   background-size: cover;
@@ -43,7 +44,7 @@
   display: flex;
   flex-flow: row wrap;
   margin-top: 50px;
-  color: #4cc552;
+  color: rgb(129, 129, 129);
 }
 .card {
   width: 250px;
@@ -88,3 +89,44 @@ li a {
   padding: 8px;
   background-color: black;
 }
+.col-12 {
+  margin: 15px;
+  text-align: center;
+}
+.picsum-img-wrapper {
+  margin: 0 auto;
+  width: 1080px;
+  height: 600px;
+  object-fit: cover;
+}
+
+/* .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  /* border: 1px solid black; */
+  /* background-image: none;
+} */
+
+/* .carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: grey;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: grey;
+} */ 
+
+/* 
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+} */
+

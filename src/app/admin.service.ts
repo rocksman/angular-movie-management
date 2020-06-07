@@ -17,6 +17,8 @@ export class AdminService {
   screens: Screen[];
   shows: Show[];
 
+  movieById: Movie;
+
   constructor() {
     this.movies = [...movie];
 
@@ -38,6 +40,15 @@ export class AdminService {
       data.video
     );
     this.movies.push(mov);
+  };
+
+  getMovieById = (id) => {
+    this.movies.map((e, i) => {
+      if (e.id == id) {
+        this.movieById = e;
+      }
+    });
+    return this.movieById;
   };
   deleteMovie = (id) => {
     let pos = -1;

@@ -4,7 +4,7 @@
     <p>We're ready for you</p>
   </div>
 </div>
-<div class="container">
+<!-- <div class="container">
   <div class="header">
     <h2>Movies</h2>
   </div>
@@ -15,4 +15,30 @@
       <p>{{ movie.description }}</p>
     </div>
   </div>
+</div> -->
+
+<div class="col-12">
+  <ngb-carousel
+    #carousel
+    [interval]="2000"
+    [pauseOnHover]="pauseOnHover"
+    (slide)="onSlide($event)"
+  >
+    <ng-template *ngFor="let movie of admin.movies; index as i" ngbSlide>
+      <a href="/movie-dets" (click)="getId(movie.id); changeModal(true)">
+        <img
+          src="{{ movie.image }}"
+          alt="{{ movie.name }}"
+          class="picsum-img-wrapper"
+        />
+      </a>
+      <h3>{{ movie.name }}</h3>
+      <p>{{ movie.description }}</p>
+    </ng-template>
+  </ngb-carousel>
+  <div *ngIf="showModal"> 
+    <app-movie-display-details [movieId]="movieId"></app-movie-display-details>
+  </div>
 </div>
+
+<router-outlet></router-outlet>

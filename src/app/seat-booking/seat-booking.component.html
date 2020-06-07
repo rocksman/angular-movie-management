@@ -8,18 +8,18 @@
 
     <!-- Showing a static legend bar -->
     <div class="legend">
-      <span class="glyphicon glyphicon-stop freeSeat"></span> FREE
+      <span class="glyphicon glyphicon-stop freeSeat"></span> Free
       <span
         class="glyphicon glyphicon-ban-circle reservedSeat padding-left"
       ></span>
-      TAKEN
+      Taken
       <span
         class="glyphicon glyphicon-ok-sign selectedSeat padding-left"
       ></span>
-      SELECTED
+      Selected
     </div>
 
-    <p class="font14 marginTop5">SCREEN THIS WAY</p>
+    <p class="font14 marginTop5">Screen this way</p>
     <div class="screen"></div>
 
     <!-- Generate the seating grid -->
@@ -45,17 +45,17 @@
     <!-- Structural directive - only visible on selection -->
     <div *ngIf="selected.length > 0" class="font14 marginTB10">
       <div class="wordWrap">
-        SEATS RESERVED : {{ selected.length }}
+        Seats Reserved : {{ selected.length }}
         <span class="count">({{ selected }})</span>
       </div>
-      <div>
-        PRICE : {{ ticketPrice }} * {{ selected.length }} = {{ currency }}.{{
+      <div class="text">
+        Price : {{ ticketPrice }} * {{ selected.length }} = {{ currency }}.{{
           ticketPrice * selected.length
         }}
       </div>
-      <div>CONVENIENCE FEE : {{ currency }}.{{ convFee }}</div>
-      <div>
-        TOTAL : {{ currency }}.{{ ticketPrice * selected.length + convFee }}
+      <div class="fee">Convenience Fee : {{ currency }}.{{ convFee }}</div>
+      <div class="total">
+        Total : {{ currency }}.{{ ticketPrice * selected.length + convFee }}
       </div>
     </div>
 
@@ -68,13 +68,18 @@
       >
         Clear
       </button>
-      <button
-        (click)="showSelected()"
-        [disabled]="selected.length === 0"
-        class="btn btn-success btn-sm"
-      >
-        Buy Tickets
-      </button>
+      <a href="/payment" (click)="showSelected(); changeModal(true)">
+        <button
+          class="btn btn-success btn-sm"
+          [disabled]="selected.length === 0"
+        >
+          Proceed to Pay
+        </button>
+      </a>
     </div>
   </main>
+  <div *ngIf="showModal">
+    <app-payment></app-payment>
+  </div>
 </div>
+<router-outlet></router-outlet>

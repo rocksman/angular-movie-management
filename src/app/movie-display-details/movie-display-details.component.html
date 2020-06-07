@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <div>
+      <!-- <img src="{{ movie.image }}" alt="{{ movie.name }}" /> -->
+      <div>
+        <h3>{{ movieId }}</h3>
+      </div>
+      <button class="btn btn-info" (click)="selectSeats(true)">
+        Select Seats
+      </button>
+    </div>
+  </div>
+  <div *ngIf="selectSeat">
+    <app-seat-booking></app-seat-booking>
+  </div>
+</div>
