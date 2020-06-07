@@ -8,10 +8,15 @@ import { AdminService } from '../admin.service';
 })
 export class TheatresAdminComponent implements OnInit {
   showModal = false;
+  showUpdate = false;
   constructor(public admin: AdminService) {}
 
   changeModal = (flag) => {
     this.showModal = flag;
+  };
+
+  changeUpdate = (flag) => {
+    this.showUpdate = flag;
   };
 
   deleteTheatre = (id) => {

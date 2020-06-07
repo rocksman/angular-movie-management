@@ -22,5 +22,9 @@ export class NewShowComponent implements OnInit {
     this.showComp.changeModal(false);
   };
 
+  closeForm = () => {
+    this.showComp.changeModal(false);
+  };
+
   ngOnInit(): void {}
 }

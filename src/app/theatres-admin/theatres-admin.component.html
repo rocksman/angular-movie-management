@@ -20,7 +20,11 @@
             <td>{{ theatre.noOfScreens }}</td>
             <td>{{ theatre.movies }}</td>
             <td><button class="btn btn-danger">Delete</button></td>
-            <td><button class="btn btn-warning">Update</button></td>
+            <td>
+              <button class="btn btn-warning" (click)="changeUpdate(true)">
+                Update
+              </button>
+            </td>
           </tr>
         </table>
       </div>
@@ -28,5 +32,8 @@
   </div>
   <div *ngIf="showModal">
     <app-new-theatre></app-new-theatre>
+  </div>
+  <div *nfIf="showUpdate">
+    <app-update-theatre></app-update-theatre>
   </div>
 </div>

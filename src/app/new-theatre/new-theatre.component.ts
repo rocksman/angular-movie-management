@@ -21,5 +21,9 @@ export class NewTheatreComponent implements OnInit {
     this.theatreComp.changeModal(false);
   };
 
+  closeForm = () => {
+    this.theatreComp.changeModal(false);
+  }
+
   ngOnInit(): void {}
 }

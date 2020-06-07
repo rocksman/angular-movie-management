@@ -20,5 +20,10 @@ export class NewMovieComponent implements OnInit {
     this.admin.addMovie(this.movie);
     this.movieComp.changeModal(false);
   };
+
+  closeForm = () => {
+    this.movieComp.changeModal(false);
+  }
+  
   ngOnInit(): void {}
 }

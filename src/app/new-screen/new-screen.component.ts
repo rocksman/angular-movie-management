@@ -20,6 +20,9 @@ export class NewScreenComponent implements OnInit {
     this.admin.addScreen(this.screen);
     this.screenComp.changeModal(false);
   };
+  closeForm = () => {
+    this.screenComp.changeModal(false);
+  };
 
   ngOnInit(): void {}
 }
